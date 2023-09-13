@@ -18,7 +18,10 @@ export class LoginPage implements OnInit {
 login (){
   console.log("usuario: "+this.usuario);
   console.log("password: "+this.password);
-  if(this.usuario == "Fernanda" && this.password == 1234){
+  const esFernanda = this.usuario == "Fernanda" && this.password == 1234;
+  const esRodrigo = this.usuario == "Rodrigo" && this.password == 4321;
+  const esGabriel = this.usuario == "Gabriel" && this.password == 1111;
+  if(esFernanda || esRodrigo || esGabriel){
     this.navCtrl.navigateForward('/home', {
       queryParams: { user: this.usuario }
     });
