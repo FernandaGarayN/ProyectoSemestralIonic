@@ -18,6 +18,9 @@
 <ion-input id="ion_password_input" label="Password" [(ngModel)]="password" label-placement="floating" type="password" fill="outline" helperText="Contraseña máximo 4 caracteres"
 [counter]="true" [maxlength]="4" placeholder="Ingrese contraseña"></ion-input>
 <ion-button (click)="login()" size="medium">Ingresar</ion-button>
+
+<ion-button (click)="irAResetPassword()">¿Olvidaste tu contraseña?</ion-button>
+
 </ion-content>
 
-{{usuario}}
+

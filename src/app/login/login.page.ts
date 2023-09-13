@@ -26,5 +26,7 @@ login (){
     alert ('Usuario o contraseña incorrectos. ');
   }
 }
-
+irAResetPassword() {
+  this.navCtrl.navigateForward('/reset-password');
+}
 }
