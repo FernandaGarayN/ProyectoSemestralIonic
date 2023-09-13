@@ -24,3 +24,37 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@keyframes carAnimation {
+    0% {
+      transform: translateX(-100%); /* Inicialmente, el título y el automóvil están fuera de la pantalla a la izquierda */
+    }
+    50% {
+      transform: translateX(50%); /* La mitad de la animación, simula la llegada a toda velocidad */
+    }
+    100% {
+      transform: translateX(0); /* La animación finaliza en el centro de la pantalla */
+    }
+  }
+  
+  .car-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+  }
+  
+  .car {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; /* Ancho del automóvil */
+    height: 100px; /* Altura del automóvil */
+    background-image: url('img/autito.png'); /* Ruta de la imagen del automóvil */
+    background-size: cover;
+    animation: carAnimation 3s ease-in-out; /* Duración de la animación y función de temporización */
+    animation-fill-mode: forwards; /* Mantener el último estado de la animación */
+  }
+  .right-align-title {
+    text-align: right;
+  }
