@@ -55,6 +55,11 @@
     animation: carAnimation 3s ease-in-out; /* Duración de la animación y función de temporización */
     animation-fill-mode: forwards; /* Mantener el último estado de la animación */
   }
+  
   .right-align-title {
     text-align: right;
+  }
+
+  ion-footer ion-title {
+    font-size: 12px; 
   }

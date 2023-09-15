@@ -7,29 +7,29 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   usuario!: string;
   password!: number;
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  login() {
+    console.log('usuario: ' + this.usuario);
+    console.log('password: ' + this.password);
+    const esFernanda = this.usuario == 'Fernanda' && this.password == 1234;
+    const esRodrigo = this.usuario == 'Rodrigo' && this.password == 4321;
+    const esGabriel = this.usuario == 'Gabriel' && this.password == 1111;
+    if (esFernanda || esRodrigo || esGabriel) {
+      this.navCtrl.navigateForward('/home', {
+        queryParams: { user: this.usuario },
+      });
+    } else {
+      alert('Usuario o contraseña incorrectos. ');
+    }
   }
-login (){
-  console.log("usuario: "+this.usuario);
-  console.log("password: "+this.password);
-  const esFernanda = this.usuario == "Fernanda" && this.password == 1234;
-  const esRodrigo = this.usuario == "Rodrigo" && this.password == 4321;
-  const esGabriel = this.usuario == "Gabriel" && this.password == 1111;
-  if(esFernanda || esRodrigo || esGabriel){
-    this.navCtrl.navigateForward('/home', {
-      queryParams: { user: this.usuario }
-    });
-  } else {
-    alert ('Usuario o contraseña incorrectos. ');
+  
+  irAResetPassword() {
+    this.navCtrl.navigateForward('/reset-password');
   }
-}
-irAResetPassword() {
-  this.navCtrl.navigateForward('/reset-password');
-}
 }

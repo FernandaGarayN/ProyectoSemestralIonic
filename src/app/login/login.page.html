@@ -1,8 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div class="car-container">
-      
-      <ion-title class="right-align-title"><h1>TeLlevo?APP</h1></ion-title>
+
+      <ion-title class="right-align-title">
+        <h1>TeLlevo?APP</h1>
+      </ion-title>
       <div class="car"></div>
     </div>
   </ion-toolbar>
@@ -14,17 +16,22 @@
       <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-input id="ion_user_input" label="Usuario" [(ngModel)]="usuario" label-placement="floating" fill="solid"helperText="Usuario máximo 8 caracteres" 
-  [counter]="true" [maxlength]="8" [minlength]="3" placeholder="Ingrese Usuario"></ion-input>
+  <ion-input id="ion_user_input" label="Usuario" [(ngModel)]="usuario" label-placement="floating" fill="solid"
+    helperText="Usuario máximo 8 caracteres" [counter]="true" [maxlength]="8" [minlength]="3"
+    placeholder="Ingrese Usuario"></ion-input>
 
-<br />
+  <br />
 
-<ion-input id="ion_password_input" label="Password" [(ngModel)]="password" label-placement="floating" type="password" fill="outline" helperText="Contraseña máximo 4 caracteres"
-[counter]="true" [maxlength]="4" placeholder="Ingrese contraseña"></ion-input>
-<ion-button (click)="login()" size="medium">Ingresar</ion-button>
+  <ion-input id="ion_password_input" label="Password" [(ngModel)]="password" label-placement="floating" type="password"
+    fill="outline" helperText="Contraseña máximo 4 caracteres" [counter]="true" [maxlength]="4"
+    placeholder="Ingrese contraseña"></ion-input>
+  <ion-button (click)="login()" size="medium">Ingresar</ion-button>
 
-<ion-button (click)="irAResetPassword()">¿Olvidaste tu contraseña?</ion-button>
+  <ion-button (click)="irAResetPassword()">¿Olvidaste tu contraseña?</ion-button>
 
 </ion-content>
-
-
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>App desarrollada por @CleanerCode</ion-title>
+  </ion-toolbar>
+</ion-footer>
